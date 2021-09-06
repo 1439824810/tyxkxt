@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>体育选课后台</title>
+</head>
+
+<body>
+    <noscript>
+			<strong>We're sorry but 体育选课后台 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <script>
+        function getVendorPrefix() {
+            const body = document.body || document.documentElement
+            const style = body.style
+            const vendor = ['webkit', 'khtml', 'moz', 'ms', 'o']
+            let i = 0
+            while (i < vendor.length) {
+                // 此处进行判断是否有对应的内核前缀
+                if (typeof style[vendor[i] + 'Transition'] === 'string') {
+                    return vendor[i]
+                }
+                i++
+            }
+        }
+        if (getVendorPrefix() !== 'webkit') {
+            // window.location.href = 'https://dl-sh-ctc-2.pchome.net/31/dt/78.0.3904.70_chrome_installer32.zip?key=93cb618a96554ba17929b4503f2427ec&tmp=1573693848210'
+            alert('检测到您的浏览器无法正常访问系统，请将浏览器切换到 极速内核/极速模式！并强烈建议使用 谷歌Chrome浏览器！')
+        }
+    </script>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+</body>
+
+</html>

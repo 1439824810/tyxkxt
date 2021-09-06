@@ -1,0 +1,18 @@
+html,
+body,
+#app {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #E5E9ED;
+    outline: none;
+    margin-top: 0px!important;
+}
+
+.el-drawer:focus {
+    outline: none;
+}
+
+.el-dropdown:focus {
+    outline: none;
+}

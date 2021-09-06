@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <title>ToHome</title>
+</head>
+
+<body>
+    <div class="href"></div>
+    <div class="dataHtml"></div>
+    <script>
+        window.onload = function() {
+                var href = document.querySelector(".href")
+                var dataHtml = document.querySelector(".dataHtml")
+	//获取企业微信跳转链接的code
+                var code = location.href.split("?")[1].split("&")[0].split("=")[1];
+                href.innerHTML = "https://yu423.mynatapp.cc/tyxkxt/getqywxInfo?code=" + code
+                //请求发送给后台，返回企业微信的用户信息，主要要学号
+	$.get(" https://yu423.mynatapp.cc/tyxkxt/getqywxInfo", {
+                        code: code
+                    },
+                    function(data) {
+                        location.href = "https://yu423.mynatapp.cc?sno="+data.data
+                    });
+            }
+
+        // location.href = `http://localhost:8080/home?sno=11111111`
+    </script>
+</body>
+
+</html>
